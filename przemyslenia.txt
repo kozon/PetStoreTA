@@ -1,0 +1,61 @@
+jak sobie radzic zeby sprawdzic z sytuacja gdy nie ma elementow - findElements.size == 0???
+
+Environment
+JAVA 1.7
+najnowszy Eclipse
+Firefox : 29.0.1
+Selenium IDE 2.5.0
+Wtyczka do Firefox'a - Firebug min 1.12.8
+Wtyczka do Firefox'a - FirePath min 0.9.7
+
+potencjalne casy
+
+Logowanie
+- bledne (User id has to be filled )
+- bledne (User password has to be filled)
+- bledne (Wrong credentials)
+- poprawne (Welcome nickname) + wylogowanie
+
+Zakup
+GoldFish (2xMale, 2xFemale) + aktualizacja wartosci total
+
+Do wykorzystania wstrzykiwania danych z exela :
+-> Przejsc przez wszystkie kategorie i wybrac wsyzstkie produkty po kolei i dodac do koszyka i sprawdzic cene
+
+
+Page : 
+0. WelcomePage
+1. SignInPage
+2. ProductsForCategoryPage
+3. ItemsForProductPage
+4. ShowItemPagePage
+5. AccountsPage
+6. UpdateAccountPage
+7. SearchResultPage
+8. ShoppingCartPage
+
+
+<li class="alert alert-info"> - niebieski
+<li class="alert alert-info">
+
+<li class="alert">  - zólty
+
+<li class="alert alert-error"> - czerwony
+
+wzorce:
+Podzial na : TestClass, Delegate/Facade/Task , PageObject
+Date Injection
+Synchronizacja
+Asserty harmcrestowe
+
+
+1. Zmieniamy na page'objecty
+2. Dane srodowiska do zewnetrznych plikow (properties)
+3. Adnotacja @Inject
+4. Wprowadzenie delegat (do wspoldzielenia procesow)
+5. Inject danych z plikow zewnetrznych
+6. Multi run dla kazdego z wiersza
+7. Harmcresty
+8. Logowanie ? -> SL lub cos od Marcina trzeba by zdobyc
+
+

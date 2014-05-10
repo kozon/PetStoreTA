@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://localhost:8080/" />
+<title>AccountInfoUpdateTest</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">AccountInfoUpdateTest</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/applicationPetstore/main.xhtml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Log in</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=j_idt67:login</td>
+	<td>user</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=j_idt67:password</td>
+	<td>user</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=j_idt67:j_idt72</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Welcome Michal</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Edit Your Account Information</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=j_idt66:firstname</td>
+	<td>Michal</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=j_idt66:j_idt97</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=li.alert.alert-info</td>
+	<td>Your account has been updated</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Log out</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForText</td>
+	<td>css=li.alert.alert-info</td>
+	<td>Youve been logged out</td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
