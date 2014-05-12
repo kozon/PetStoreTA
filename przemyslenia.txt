@@ -38,7 +38,7 @@ Page :
 <li class="alert alert-info"> - niebieski
 <li class="alert alert-info">
 
-<li class="alert">  - zólty
+<li class="alert">  - zï¿½lty
 
 <li class="alert alert-error"> - czerwony
 
@@ -60,3 +60,7 @@ Asserty harmcrestowe
 8. Logowanie ? -> SL lub cos od Marcina trzeba by zdobyc
 
 
+Ciekawostki:
+- PageFactory (https://code.google.com/p/selenium/wiki/PageFactory)
+- SL
+- Zwracanie
