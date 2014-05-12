@@ -6,15 +6,15 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class BasePage {
+public abstract class BasePage {
 
-	protected WebDriver driver;
+	private WebDriver driver;
 	private static final String FISH_CATEGORY = "Fish";
 	private static final By sideBar = By.className("sidebar-nav");
 	private static final By LOG_OUT = By.linkText("Log out");
 	private static final By ALERT = By.xpath("//li[contains(@class,'alert')]");
 	
-	public BasePage(WebDriver webDriver){
+	protected BasePage(WebDriver webDriver){
 		this.driver = webDriver;
 	}
 	
@@ -35,7 +35,7 @@ public class BasePage {
 		selectCategory(FISH_CATEGORY);
 	}
 	
-	private void selectCategory(String category){
+	public void selectCategory(String category){
 		element(sideBar).findElement(By.linkText(category)).click();
 	}
 	

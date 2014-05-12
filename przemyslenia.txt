@@ -2,7 +2,7 @@ jak sobie radzic zeby sprawdzic z sytuacja gdy nie ma elementow - findElements.s
 
 Environment
 JAVA 1.7
-najnowszy Eclipse
+najnowszy Eclipse + plugin TestNG
 Firefox : 29.0.1
 Selenium IDE 2.5.0
 Wtyczka do Firefox'a - Firebug min 1.12.8
@@ -50,6 +50,7 @@ Asserty harmcrestowe
 
 
 1. Zmieniamy na page'objecty
+1.1 Inny test mozna by jeszcze bardziej "zupgreadowac" przy uzyciu adnotacji - wiecej tutaj https://code.google.com/p/selenium/wiki/PageFactory
 2. Dane srodowiska do zewnetrznych plikow (properties)
 3. Adnotacja @Inject
 4. Wprowadzenie delegat (do wspoldzielenia procesow)
