@@ -65,3 +65,7 @@ Asserty harmcrestowe
 9. Konfiguracja FF (tworzenie profilu ff i konfiguracja selenium aby uzywal tego profilu, uzywanie firebug + firepath)
 
 
+Ciekawostki:
+- PageFactory (https://code.google.com/p/selenium/wiki/PageFactory)
+- SL
+- Zwracanie
