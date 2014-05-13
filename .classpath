@@ -39,13 +39,23 @@
 	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/selenium-2.41.0/libs/xalan-2.7.1.jar"/>
 	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/selenium-2.41.0/libs/xercesImpl-2.10.0.jar"/>
 	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/selenium-2.41.0/libs/xml-apis-1.4.01.jar"/>
-	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/selenium-2.41.0/selenium-java-2.41.0.jar" sourcepath="C:/job/_INFOSHARE/_LIBS/selenium-2.41.0/selenium-java-2.41.0-srcs.jar"/>
-	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/selenium-2.41.0/selenium-java-2.41.0-srcs.jar"/>
-	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/javax.inject-1-bundle/javax.inject-1.jar"/>
-	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/javax.inject-1-bundle/javax.inject-1-javadoc.jar"/>
-	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/javax.inject-1-bundle/javax.inject-1-sources.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/feed4junit/feed4junit-1.1.15.jar"/>
 	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/feed4junit/feed4junit-1.1.15-sources.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/javax.inject.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/selenium-2.41.0/selenium-java-2.41.0.jar" sourcepath="C:/job/_INFOSHARE/_LIBS/selenium-2.41.0/selenium-java-2.41.0-srcs.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/aopalliance.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/guice-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/guice-assistedinject-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/guice-grapher-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/guice-jmx-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/guice-jndi-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/guice-multibindings-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/guice-persist-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/guice-servlet-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/guice-spring-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/guice-struts2-plugin-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/inject/guice-3.0/guice-3.0/guice-throwingproviders-3.0.jar"/>
+	<classpathentry kind="lib" path="C:/job/_INFOSHARE/_LIBS/selenium-2.41.0/selenium-java-2.41.0-srcs.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

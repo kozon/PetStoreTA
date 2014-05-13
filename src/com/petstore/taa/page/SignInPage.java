@@ -10,7 +10,7 @@ public class SignInPage extends BasePage{
 	private By signInButton = By.xpath("//input[@value='Sign In']");
 	
 	public SignInPage(WebDriver webDriver) {
-		super(webDriver);
+		super(webDriver , By.xpath("//h2[text()='Sign In']"));
 	}
 	
 	public SignInPage enterLogIn(String value){
@@ -23,9 +23,9 @@ public class SignInPage extends BasePage{
 		return this;
 	}
 	
-	public SignInPage clickSignInButton(){
+	public WelcomePage clickSignInButton(){
 		element(signInButton).click();
-		return this;
+		return new WelcomePage(getDriver());
 	}
 
 }

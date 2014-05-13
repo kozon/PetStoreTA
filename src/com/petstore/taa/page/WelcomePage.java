@@ -11,11 +11,11 @@ public class WelcomePage extends BasePage{
 	
 	@Inject
 	public WelcomePage(WebDriver webDriver) {
-		super(webDriver);
+		super(webDriver, By.xpath("//img[@alt='Welcome to YAPS PetStore']"));
 	}
 	
 	public void clickLogInButton(){
 		element(logInButton).click();
 	}
-
+	
 }

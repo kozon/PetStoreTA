@@ -12,7 +12,7 @@ public class ShoppingCartPage extends BasePage{
 	private static final String REMOVE_BUTTON_PATTERN = TABLE_ROW_PATTERN+"//a[text()='Remove']";
 	
 	public ShoppingCartPage(WebDriver webDriver) {
-		super(webDriver);
+		super(webDriver, By.xpath("//h2[text()='Shopping Cart']"));
 	}
 	
 	public String getTotal(){

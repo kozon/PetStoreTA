@@ -38,13 +38,13 @@ Page :
 <li class="alert alert-info"> - niebieski
 <li class="alert alert-info">
 
-<li class="alert">  - z�lty
+<li class="alert">  - zólty
 
 <li class="alert alert-error"> - czerwony
 
 wzorce:
 Podzial na : TestClass, Delegate/Facade/Task , PageObject
-Date Injection
+Date Injection (feed for junit'a + ... )
 Synchronizacja
 Asserty harmcrestowe
 
@@ -54,9 +54,14 @@ Asserty harmcrestowe
 2. Dane srodowiska do zewnetrznych plikow (properties)
 3. Adnotacja @Inject
 4. Wprowadzenie delegat (do wspoldzielenia procesow)
+4.1 Synchronizacja na onPage - albo istniejący albo nowy TC
+
 5. Inject danych z plikow zewnetrznych
 6. Multi run dla kazdego z wiersza
+
 7. Harmcresty
-8. Logowanie ? -> SL lub cos od Marcina trzeba by zdobyc
+8. Logowanie ? -> SL lub cos od Marcina trzeba by zdobyc ???
+
+9. Konfiguracja FF (tworzenie profilu ff i konfiguracja selenium aby uzywal tego profilu, uzywanie firebug + firepath)
 
 

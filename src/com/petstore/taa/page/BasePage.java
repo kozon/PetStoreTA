@@ -14,8 +14,11 @@ public abstract class BasePage {
 	private static final By LOG_OUT = By.linkText("Log out");
 	private static final By ALERT = By.xpath("//li[contains(@class,'alert')]");
 	
-	protected BasePage(WebDriver webDriver){
+	private By uniquePageElement;
+	
+	protected BasePage(WebDriver webDriver, By elementLocator){
 		this.driver = webDriver;
+		this.uniquePageElement = elementLocator;
 	}
 	
 	protected WebElement element(By locator){
@@ -45,6 +48,14 @@ public abstract class BasePage {
 	
 	public String getAlertMessage(){
 		return element(ALERT).getText().trim();
+	}
+	
+	protected WebDriver getDriver(){
+		return driver;
+	}
+	
+	public By pageUniqueLocator(){
+		return uniquePageElement;
 	}
 	
 }

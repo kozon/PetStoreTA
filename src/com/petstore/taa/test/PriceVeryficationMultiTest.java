@@ -4,6 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.petstore.taa.data.PriceVeryfication;
 import com.petstore.taa.page.ItemsForProductPage;
 import com.petstore.taa.page.ProductsForCategoryPage;
 import com.petstore.taa.page.ShoppingCartPage;
@@ -20,7 +21,7 @@ public class PriceVeryficationMultiTest extends BaseTest {
 
 	@Before
 	public void setUp() {
-		welcomePage = new WelcomePage(driver);
+//		welcomePage = new WelcomePage(driver);
 		signInPage = new SignInPage(driver);
 		productsForCategory = new ProductsForCategoryPage(driver);
 		itemsForProductPage = new ItemsForProductPage(driver);
