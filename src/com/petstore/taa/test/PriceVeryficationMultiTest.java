@@ -1,16 +1,20 @@
 package com.petstore.taa.test;
 
+import org.databene.benerator.anno.Source;
+import org.databene.feed4junit.Feeder;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
-import com.petstore.taa.data.PriceVeryfication;
+import com.petstore.taa.data.PriceVerification;
 import com.petstore.taa.page.ItemsForProductPage;
 import com.petstore.taa.page.ProductsForCategoryPage;
 import com.petstore.taa.page.ShoppingCartPage;
 import com.petstore.taa.page.SignInPage;
 import com.petstore.taa.page.WelcomePage;
 
+@RunWith(Feeder.class)
 public class PriceVeryficationMultiTest extends BaseTest {
 
 	private WelcomePage welcomePage;
@@ -21,31 +25,29 @@ public class PriceVeryficationMultiTest extends BaseTest {
 
 	@Before
 	public void setUp() {
-//		welcomePage = new WelcomePage(driver);
+		welcomePage = new WelcomePage(driver);
 		signInPage = new SignInPage(driver);
 		productsForCategory = new ProductsForCategoryPage(driver);
 		itemsForProductPage = new ItemsForProductPage(driver);
 		shoppingCartPage = new ShoppingCartPage(driver);
 	}
-
 	
-	//TODO - use feed4junit in order to inject PriceVerification data object 
 	@Test
-	public void priceVeryficationMultiTest() {
+	public void priceVerificationMultiTest(@Source("data/PriceVerification.xlsx") PriceVerification data) {
 		welcomePage
 			.clickLogInButton();
 		signInPage
-			.enterLogIn("user")
-			.enterPassword("user")
+			.enterLogIn(data.getUser())
+			.enterPassword(data.getPass())
 			.clickSignInButton();
 		welcomePage
-			.selectCategory("Fish");
+			.selectCategory(data.getCategory());
 		productsForCategory
-			.selectProduct("Angelfish");
+			.selectProduct(data.getProduct());
 		itemsForProductPage
-			.addToCart("Thootless");
+			.addToCart(data.getItem());
 		
-		Assert.assertEquals("$ 10.0", shoppingCartPage.getTotal());
+		Assert.assertEquals(data.getExpectedPrice(), shoppingCartPage.getTotal());
 	}
 
 }

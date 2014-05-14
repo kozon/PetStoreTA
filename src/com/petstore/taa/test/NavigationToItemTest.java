@@ -20,7 +20,6 @@ public class NavigationToItemTest extends BaseTest {
 		itemsForProductPage = new ItemsForProductPage(driver);
 	}
 
-	
 	@Test
 	public void testNavigationToItem(){
 		onPage(welcomePage)
@@ -28,10 +27,8 @@ public class NavigationToItemTest extends BaseTest {
 		
 		onPage(productsForCategory)
 			.selectProduct(1);
-		onPage(productsForCategory)
-			.selectProduct(2);
-//		itemsForProductPage
-//			.selectItem(2);
+		onPage(itemsForProductPage)
+			.selectItem(2);
 		System.out.println();
 	}
 	
