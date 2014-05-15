@@ -13,8 +13,9 @@ public class ProductsForCategoryPage extends BasePage{
 		super(webDriver, By.xpath("//h2[text()[contains(.,'Products for category : ')]]"));
 	}
 	
-	public void selectProduct(String productName){
+	public ItemsForProductPage selectProduct(String productName){
 		element(By.xpath(String.format(PRODUCT_LINK_PATTERN, productName))).click();
+		return onPage(new ItemsForProductPage(getDriver()));
 	}
 	
 	public ProductsForCategoryPage selectProduct(int index){

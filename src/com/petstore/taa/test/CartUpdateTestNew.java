@@ -1,11 +1,8 @@
 package com.petstore.taa.test;
 
-import javax.inject.Inject;
-
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.testng.annotations.Guice;
 
 import com.petstore.taa.page.ItemsForProductPage;
 import com.petstore.taa.page.ProductsForCategoryPage;
@@ -13,7 +10,16 @@ import com.petstore.taa.page.ShoppingCartPage;
 import com.petstore.taa.page.SignInPage;
 import com.petstore.taa.page.WelcomePage;
 
-// apply page synchronization
+/**
+ * Step 1.
+ * In this class following approach/technique/patterns will be presented
+ *  - simple PageObject pattern usage
+ *  - moving varying code to base classes
+ *  - harmcrest verification
+ *  
+ * @author michalkoz
+ *
+ */
 public class CartUpdateTestNew extends BaseTest {
 	
 	private WelcomePage welcomePage;
@@ -24,65 +30,65 @@ public class CartUpdateTestNew extends BaseTest {
 
 	@Before
 	public void setUp() {
-		welcomePage = new WelcomePage(driver);
-		signInPage = new SignInPage(driver);
-		productsForCategory = new ProductsForCategoryPage(driver);
-		itemsForProductPage = new ItemsForProductPage(driver);
-		shoppingCartPage = new ShoppingCartPage(driver);
+		welcomePage = new WelcomePage(webDriver);
+		signInPage = new SignInPage(webDriver);
+		productsForCategory = new ProductsForCategoryPage(webDriver);
+		itemsForProductPage = new ItemsForProductPage(webDriver);
+		shoppingCartPage = new ShoppingCartPage(webDriver);
 	}
 
 	@Test
 	public void testCartUpdate() throws Exception {
-		onPage(welcomePage)
+		welcomePage
 			.clickLogInButton();
-		onPage(signInPage)
+		signInPage
 			.enterLogIn("user")
 			.enterPassword("user")
 			.clickSignInButton();
 
-		onPage(welcomePage)
+		welcomePage
 			.selectFishCategory();
 
-		onPage(productsForCategory)
+		productsForCategory
 			.selectProduct("Goldfish");
 		
-		onPage(itemsForProductPage)
+		itemsForProductPage
 			.addToCart("Female Puppy");
-		Assert.assertEquals("$ 12.0", onPage(shoppingCartPage).getTotal());
+		Assert.assertEquals("$ 12.0", shoppingCartPage.getTotal());
 
-		onPage(shoppingCartPage)
+		shoppingCartPage
 			.selectFishCategory();
-		onPage(productsForCategory)
+		productsForCategory
 			.selectProduct("Goldfish");
-		onPage(itemsForProductPage)
+		itemsForProductPage
 			.addToCart("Male Puppy");
-		Assert.assertEquals("$ 24.0", onPage(shoppingCartPage).getTotal());
+		Assert.assertEquals("$ 24.0", shoppingCartPage.getTotal());
 
-		onPage(shoppingCartPage)
+		shoppingCartPage
 			.enterQuantity(1, "2")
 			.clickUpdateQuantity(1);
-		Assert.assertEquals("$ 36.0", onPage(shoppingCartPage).getTotal());
+		Assert.assertEquals("$ 36.0", shoppingCartPage.getTotal());
 
 		onPage(shoppingCartPage)
 			.enterQuantity(2, "2")
 			.clickUpdateQuantity(2);
-		Assert.assertEquals("$ 48.0", onPage(shoppingCartPage).getTotal());
+		Assert.assertEquals("$ 48.0", shoppingCartPage.getTotal());
 
-		onPage(shoppingCartPage)
+		shoppingCartPage
 			.selectFishCategory();
-		onPage(productsForCategory)
+		productsForCategory
 			.selectProduct("Koi");
-		onPage(itemsForProductPage)
+		itemsForProductPage
 			.addToCart("Male Adult");
-		Assert.assertEquals("$ 60.0", onPage(shoppingCartPage).getTotal());
+		Assert.assertEquals("$ 60.0", shoppingCartPage.getTotal());
 
-		onPage(shoppingCartPage)
+		shoppingCartPage
 			.clickRemove(3);
-		Assert.assertEquals("$ 48.0", onPage(shoppingCartPage).getTotal());
+		Assert.assertEquals("$ 48.0", shoppingCartPage.getTotal());
 
-		onPage(shoppingCartPage).logOut();
+		shoppingCartPage.logOut();
 		Assert.assertEquals("Youve been logged out",
-				onPage(welcomePage).getAlertMessage());
+				welcomePage.getAlertMessage());
 
 	}
 

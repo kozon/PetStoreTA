@@ -7,6 +7,14 @@ import com.petstore.taa.page.ItemsForProductPage;
 import com.petstore.taa.page.ProductsForCategoryPage;
 import com.petstore.taa.page.WelcomePage;
 
+/**
+ * Step 2.
+ * In this class following approach/technique/patterns will be presented:
+ * 	- page elements (locators) reusage in different tests
+ * 	- onPage synchronization - wait until page is loaded
+ * @author michalkoz
+ *
+ */
 public class NavigationToItemTest extends BaseTest {
 
 	private WelcomePage welcomePage;
@@ -15,9 +23,9 @@ public class NavigationToItemTest extends BaseTest {
 	
 	@Before
 	public void setUp() {
-		welcomePage = new WelcomePage(driver);
-		productsForCategory = new ProductsForCategoryPage(driver);
-		itemsForProductPage = new ItemsForProductPage(driver);
+		welcomePage = new WelcomePage(webDriver);
+		productsForCategory = new ProductsForCategoryPage(webDriver);
+		itemsForProductPage = new ItemsForProductPage(webDriver);
 	}
 
 	@Test

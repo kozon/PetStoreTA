@@ -5,10 +5,12 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public abstract class BasePage {
 
-	private WebDriver driver;
+	private WebDriver webDriver;
 	private static final String FISH_CATEGORY = "Fish";
 	private static final By sideBar = By.className("sidebar-nav");
 	private static final By LOG_OUT = By.linkText("Log out");
@@ -17,16 +19,16 @@ public abstract class BasePage {
 	private By uniquePageElement;
 	
 	protected BasePage(WebDriver webDriver, By elementLocator){
-		this.driver = webDriver;
+		this.webDriver = webDriver;
 		this.uniquePageElement = elementLocator;
 	}
 	
 	protected WebElement element(By locator){
-		return driver.findElement(locator);
+		return webDriver.findElement(locator);
 	}
 	
 	protected List<WebElement> elements(By locator){
-		return driver.findElements(locator);
+		return webDriver.findElements(locator);
 	}
 	
 	protected void fillText(By locator, String value){
@@ -38,8 +40,9 @@ public abstract class BasePage {
 		selectCategory(FISH_CATEGORY);
 	}
 	
-	public void selectCategory(String category){
+	public ProductsForCategoryPage selectCategory(String category){
 		element(sideBar).findElement(By.linkText(category)).click();
+		return onPage(new ProductsForCategoryPage(webDriver));
 	}
 	
 	public void logOut(){
@@ -51,11 +54,17 @@ public abstract class BasePage {
 	}
 	
 	protected WebDriver getDriver(){
-		return driver;
+		return webDriver;
 	}
 	
 	public By pageUniqueLocator(){
 		return uniquePageElement;
 	}
+	
+	public <T extends BasePage> T onPage(T page) {
+		(new WebDriverWait(webDriver, 10))
+			.until(ExpectedConditions.presenceOfElementLocated(page.pageUniqueLocator()));
+		return page;
+	} 
 	
 }

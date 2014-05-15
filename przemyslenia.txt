@@ -69,3 +69,9 @@ Ciekawostki:
 - PageFactory (https://code.google.com/p/selenium/wiki/PageFactory)
 - SL
 - Zwracanie
+
+Przebieg prezentacji:
+Step1. CartUpdateTestNew.java
+Step2. NavigationToItemTest.java
+Step3. PriceVerificationMultiTest.java
+Step4. AccountInfoUpdateTestNew.java

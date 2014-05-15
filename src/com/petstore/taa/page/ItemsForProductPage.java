@@ -20,14 +20,14 @@ public class ItemsForProductPage extends BasePage{
 		elements(ADD_TO_CART_DIRECT_LINK).get(index).click();
 	}
 	
-	public void addToCart(String product){
+	public ShoppingCartPage addToCart(String product){
 		element(By.xpath(String.format(ADD_TO_CART_BY_PRODUCT_PATTERN, product))).click();
+		return onPage(new ShoppingCartPage(getDriver()));
 	}
 	
 	public void selectItem(int index){
 		WebElement element = element(By.xpath(String.format(ITEM_LINK_PATTERN_ALT, index)));
-		element.sendKeys(Keys.ENTER);
-//		element(By.xpath(String.format(ITEM_LINK_PATTERN_ALT, index))).click();
+		element.click();
 	}
 	
 }

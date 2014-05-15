@@ -25,7 +25,7 @@ public class SignInPage extends BasePage{
 	
 	public WelcomePage clickSignInButton(){
 		element(signInButton).click();
-		return new WelcomePage(getDriver());
+		return onPage(new WelcomePage(getDriver()));
 	}
 
 }
