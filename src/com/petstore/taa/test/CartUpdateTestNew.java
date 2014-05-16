@@ -3,12 +3,14 @@ package com.petstore.taa.test;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import com.petstore.taa.page.ItemsForProductPage;
 import com.petstore.taa.page.ProductsForCategoryPage;
 import com.petstore.taa.page.ShoppingCartPage;
 import com.petstore.taa.page.SignInPage;
 import com.petstore.taa.page.WelcomePage;
+import com.petstore.taa.test.suite.SlowTests;
 
 /**
  * Step 1.
@@ -20,6 +22,7 @@ import com.petstore.taa.page.WelcomePage;
  * @author michalkoz
  *
  */
+@Category(SlowTests.class)
 public class CartUpdateTestNew extends BaseTest {
 	
 	private WelcomePage welcomePage;

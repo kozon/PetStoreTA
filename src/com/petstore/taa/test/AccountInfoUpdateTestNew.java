@@ -6,12 +6,14 @@ import java.util.Date;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.openqa.selenium.support.PageFactory;
 
 import com.petstore.taa.page.AccountsPage;
 import com.petstore.taa.page.UpdateAccountPage;
 import com.petstore.taa.page.WelcomePage;
 import com.petstore.taa.task.SignInTask;
+import com.petstore.taa.test.suite.SlowTests;
 
 /**
  * Step 4. 
@@ -24,6 +26,7 @@ import com.petstore.taa.task.SignInTask;
  * @author michalkoz
  * 
  */
+@Category(SlowTests.class)
 public class AccountInfoUpdateTestNew extends BaseTest {
 
 	private WelcomePage welcomePage;

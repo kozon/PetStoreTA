@@ -17,9 +17,10 @@ import com.petstore.taa.task.SignInTask;
 /**
  * Step 3.
  * In this class following approach/technique/patterns will be presented:
- * 	- task layer introduction (for gathering business process test steps)
+ * 	- task layer introduction (for gathering similar business process test steps)
  *  - data injection from external resource files
- *  - multirun of a the same business logic
+ *  - multirun of the same business logic
+ *  
  * @author michalkoz
  *
  */

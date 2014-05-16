@@ -2,10 +2,13 @@ package com.petstore.taa.test;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
 import com.petstore.taa.page.ItemsForProductPage;
 import com.petstore.taa.page.ProductsForCategoryPage;
 import com.petstore.taa.page.WelcomePage;
+import com.petstore.taa.test.suite.FastTests;
+import com.petstore.taa.test.suite.SlowTests;
 
 /**
  * Step 2.
@@ -17,6 +20,7 @@ import com.petstore.taa.page.WelcomePage;
  * @author michalkoz
  *
  */
+@Category(FastTests.class)
 public class NavigationToItemTest extends BaseTest {
 
 	private WelcomePage welcomePage;

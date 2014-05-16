@@ -14,9 +14,9 @@ Wstępny plan prezentacji:
  
  * Step 3. -> PriceVerificationMultiTest <-
  * In this class following approach/technique/patterns will be presented:
- * 	- task layer introduction (for gathering business process test steps)
+ * 	- task layer introduction (for gathering similar business process test steps)
  *  - data injection from external resource files
- *  - multirun of a the same business logic
+ *  - multirun of the same business logic
 
  * Step 4. -> AccountInfoUpdateTestNew <-
  * In this class following approach/technique/patterns will be presented:
@@ -24,6 +24,9 @@ Wstępny plan prezentacji:
  * 	  PageFactory and FindBy annotations
  * 	- usage of previously created task object
  *  - launching test on a SauceLabs + SauceLabs configuration
+
+Step 5. -> suite package <-
+ * Introduction to tests grouping with @Categories annotation  
 
 TODO :
 - slajdy
