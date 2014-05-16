@@ -1,3 +1,39 @@
+Wstępny plan prezentacji:
+
+ * Step 1. -> CartUpdateTestNew <-
+ * In this class following approach/technique/patterns will be presented
+ *  - simple PageObject pattern usage
+ *  - moving varying code to base classes
+ *  - harmcrest verification -> moze przeniesc do kolejnego kroku
+ 
+ * Step 2. -> NavigationToItemTest <-
+ * In this class following approach/technique/patterns will be presented:
+ * 	- page elements (locators) reusage in different tests
+ * 	- onPage synchronization - wait until page is loaded
+ * 	- introduction properties files for gathering env related stuff
+ 
+ * Step 3. -> PriceVerificationMultiTest <-
+ * In this class following approach/technique/patterns will be presented:
+ * 	- task layer introduction (for gathering business process test steps)
+ *  - data injection from external resource files
+ *  - multirun of a the same business logic
+
+ * Step 4. -> AccountInfoUpdateTestNew <-
+ * In this class following approach/technique/patterns will be presented:
+ * 	- presenting another way to use PageObjects pattern with a usage of
+ * 	  PageFactory and FindBy annotations
+ * 	- usage of previously created task object
+ *  - launching test on a SauceLabs + SauceLabs configuration
+
+TODO :
+- slajdy
+- env setup instrukcja
+- grupowanie testów dla różnych build runów -> przygotować opracowanie dla Junit'a
+- tworzenie profilu FF oraz użycie go przez Selenium w testach lokalnych
+- 
+- logowanie (log4j, log4testing) ??
+- ...
+
 jak sobie radzic zeby sprawdzic z sytuacja gdy nie ma elementow - findElements.size == 0???
 
 Environment
@@ -47,31 +83,3 @@ Podzial na : TestClass, Delegate/Facade/Task , PageObject
 Date Injection (feed for junit'a + ... )
 Synchronizacja
 Asserty harmcrestowe
-
-
-1. Zmieniamy na page'objecty
-1.1 Inny test mozna by jeszcze bardziej "zupgreadowac" przy uzyciu adnotacji - wiecej tutaj https://code.google.com/p/selenium/wiki/PageFactory
-2. Dane srodowiska do zewnetrznych plikow (properties)
-3. Adnotacja @Inject
-4. Wprowadzenie delegat (do wspoldzielenia procesow)
-4.1 Synchronizacja na onPage - albo istniejący albo nowy TC
-
-5. Inject danych z plikow zewnetrznych
-6. Multi run dla kazdego z wiersza
-
-7. Harmcresty
-8. Logowanie ? -> SL lub cos od Marcina trzeba by zdobyc ???
-
-9. Konfiguracja FF (tworzenie profilu ff i konfiguracja selenium aby uzywal tego profilu, uzywanie firebug + firepath)
-
-
-Ciekawostki:
-- PageFactory (https://code.google.com/p/selenium/wiki/PageFactory)
-- SL
-- Zwracanie
-
-Przebieg prezentacji:
-Step1. CartUpdateTestNew.java
-Step2. NavigationToItemTest.java
-Step3. PriceVerificationMultiTest.java
-Step4. AccountInfoUpdateTestNew.java

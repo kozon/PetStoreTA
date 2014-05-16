@@ -19,6 +19,7 @@ import com.petstore.taa.task.SignInTask;
  * 	- presenting another way to use PageObjects pattern with a usage of
  * 	  PageFactory and FindBy annotations
  * 	- usage of previously created task object
+ *  - launching test on a SauceLabs + SauceLabs configuration
  * 
  * @author michalkoz
  * 

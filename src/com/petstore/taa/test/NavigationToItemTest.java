@@ -12,6 +12,8 @@ import com.petstore.taa.page.WelcomePage;
  * In this class following approach/technique/patterns will be presented:
  * 	- page elements (locators) reusage in different tests
  * 	- onPage synchronization - wait until page is loaded
+ * 	- introduction properties files for gathering env related stuff
+ * 
  * @author michalkoz
  *
  */
