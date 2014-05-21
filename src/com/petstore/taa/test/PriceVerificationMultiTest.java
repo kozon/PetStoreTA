@@ -15,7 +15,7 @@ import com.petstore.taa.page.WelcomePage;
 import com.petstore.taa.task.SignInTask;
 
 /**
- * Step 3.
+ * Step 3. - time up to 30 minutes
  * In this class following approach/technique/patterns will be presented:
  * 	- task layer introduction (for gathering similar business process test steps)
  *  - data injection from external resource files

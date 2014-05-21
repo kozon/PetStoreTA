@@ -11,7 +11,7 @@ import com.petstore.taa.test.NavigationToItemTest;
 import com.petstore.taa.test.PriceVerificationMultiTest;
 
 @RunWith(Categories.class)
-@IncludeCategory(FastTests.class)
+@IncludeCategory(SlowTests.class)
 @SuiteClasses({AccountInfoUpdateTestNew.class, CartUpdateTestNew.class, NavigationToItemTest.class, PriceVerificationMultiTest.class})
 public class FastTestSuite {
 

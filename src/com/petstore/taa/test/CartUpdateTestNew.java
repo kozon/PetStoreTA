@@ -13,11 +13,10 @@ import com.petstore.taa.page.WelcomePage;
 import com.petstore.taa.test.suite.SlowTests;
 
 /**
- * Step 1.
+ * Step 1. - time up to 1h20
  * In this class following approach/technique/patterns will be presented
  *  - simple PageObject pattern usage
  *  - moving varying code to base classes
- *  - harmcrest verification
  *  
  * @author michalkoz
  *

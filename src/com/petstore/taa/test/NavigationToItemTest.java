@@ -8,10 +8,9 @@ import com.petstore.taa.page.ItemsForProductPage;
 import com.petstore.taa.page.ProductsForCategoryPage;
 import com.petstore.taa.page.WelcomePage;
 import com.petstore.taa.test.suite.FastTests;
-import com.petstore.taa.test.suite.SlowTests;
 
 /**
- * Step 2.
+ * Step 2. - time up to 30m
  * In this class following approach/technique/patterns will be presented:
  * 	- page elements (locators) reusage in different tests
  * 	- onPage synchronization - wait until page is loaded
